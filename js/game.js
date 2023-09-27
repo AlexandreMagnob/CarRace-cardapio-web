@@ -70,18 +70,18 @@ gameState.prototype = {
 
   setScreen:function()
   {
-    this.roadLines = this.game.add.sprite(this.centerX,0,'road');
-    this.roadLines.anchor.set(0.5,0);
+    this.track = this.game.add.sprite(this.centerX,0,'road');
+    this.track.anchor.set(0.5,0);
 
-    this.roadLines1 = this.game.add.sprite(this.centerX,0,'road_lines');
-    this.roadLines1.anchor.set(0.5,0);
-    this.roadLines1.y = 0-this.roadLines1.height;
-    this.physics.arcade.enable(this.roadLines1);
+    this.track1 = this.game.add.sprite(this.centerX,0,'track');
+    this.track1.anchor.set(0.5,0);
+    this.track1.y = 0-this.track1.height;
+    this.physics.arcade.enable(this.track1);
 
-    this.roadLines2 = this.game.add.sprite(this.centerX,0,'road_lines');
-    this.roadLines2.anchor.set(0.5,0);
-    this.roadLines2.y = this.roadLines1.y+this.roadLines1.height;
-    this.physics.arcade.enable(this.roadLines2);
+    this.track2 = this.game.add.sprite(this.centerX,0,'track');
+    this.track2.anchor.set(0.5,0);
+    this.track2.y = this.track1.y+this.track1.height;
+    this.physics.arcade.enable(this.track2);
 
     this.coinGroup = this.add.physicsGroup();
     this.oppCarsGroup = this.add.physicsGroup();
@@ -182,8 +182,8 @@ gameState.prototype = {
     this.gameOverFlag = true;
 
     this.speed = 0;
-    this.roadLines1.body.velocity.x = 0;
-    this.roadLines2.body.velocity.y = 0;
+    this.track1.body.velocity.x = 0;
+    this.track2.body.velocity.y = 0;
 
     for(var i=0; i < this.oppCarsGroup.children.length; i++)
     {
@@ -291,8 +291,8 @@ gameState.prototype = {
        this.playerVehicle.body.velocity.x = 0;
        this.playerVehicle.body.velocity.y = 0;
 
-       this.roadLines2.body.velocity.y = 0;
-       this.roadLines1.body.velocity.y = 0;
+       this.track2.body.velocity.y = 0;
+       this.track1.body.velocity.y = 0;
 
        return;
      }
@@ -312,16 +312,16 @@ gameState.prototype = {
    },
    movePlayerVehicle:function()
    {
-     if(this.roadLines2.y >= this.world.height) {
-       this.roadLines2.y = this.roadLines1.y-this.roadLines1.height;
+     if(this.track2.y >= this.world.height) {
+       this.track2.y = this.track1.y-this.track1.height;
      }
 
-     if(this.roadLines1.y >= this.world.height) {
-       this.roadLines1.y = this.roadLines2.y-this.roadLines1.height;
+     if(this.track1.y >= this.world.height) {
+       this.track1.y = this.track2.y-this.track1.height;
      }
 
-     this.roadLines1.body.velocity.y = this.speed;
-     this.roadLines2.body.velocity.y = this.speed;
+     this.track1.body.velocity.y = this.speed;
+     this.track2.body.velocity.y = this.speed;
 
      if(this.playerVehicle.hitted===false) { this.setScore(1); }
 

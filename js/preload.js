@@ -49,7 +49,7 @@ preloadState.prototype = {
      this.load.image('next_button','ui/next_button.png?v='+t);
 
      this.load.image('road','road.png?v='+t);
-     this.load.image('road_lines','road_lines.png?v='+t);
+     this.load.image('track','track.png?v='+t);
 
      this.load.image('coin','coin.png?v='+t);
      this.load.image('heart','heart.png?v='+t);
