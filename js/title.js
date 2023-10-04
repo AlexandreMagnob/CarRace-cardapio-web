@@ -31,7 +31,7 @@ titleState.prototype = {
   onPlayButtonUp:function()
   {
     this.onUp(this.playButton);
-    this.state.start('select');
+    this.state.start('game');
   },
   addButton:function(x,y,str)
   {

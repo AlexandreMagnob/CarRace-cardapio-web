@@ -39,10 +39,10 @@ resultState.prototype = {
       strokeThickness:18
     };
 
-    var scoreField = this.add.text(this.centerX,650,"Score\n"+Global.score.toString(),text_style);
+    var scoreField = this.add.text(this.centerX,650,"Pontos\n"+Global.score.toString(),text_style);
     scoreField.anchor.set(0.5);
 
-    var highScoreField = this.add.text(this.centerX,950,"High Score\n" + Global.highScore.toString(),text_style);
+    var highScoreField = this.add.text(this.centerX,950,"Pontuação Mais Alta\n" + Global.highScore.toString(),text_style);
     highScoreField.anchor.set(0.5);
 
     this.retryButton = this.addButton(this.centerX,1500,"retry_button");
@@ -57,7 +57,7 @@ resultState.prototype = {
   onRetryUp:function()
   {
     this.onUp(this.retryButton);
-    this.state.start('title');
+    this.state.start('game');
   },
 
   addButton:function(x,y,str)

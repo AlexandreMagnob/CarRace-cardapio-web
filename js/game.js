@@ -40,15 +40,15 @@ gameState.prototype = {
   addHud:function()
   {
     var hudbar = this.add.sprite(0,0,"hudbar");
-    hudbar.alpha = 0.65;
+    hudbar.alpha = 0.30;
 
     var style = {font: "50px Arial Black", fill: "#fff",align: "left"};
 
-    var scoreLabel = this.add.text(20, 20,"SCORE:",style);
-    this.scoreField = this.add.text(scoreLabel.x+220, 20,this.score.toString(),style);
+    var scoreLabel = this.add.text(5, 20,"PONTOS:",style);
+    this.scoreField = this.add.text(scoreLabel.x+270, 20,this.score.toString(),style);
 
-    var lifeLabel = this.add.text(880, 20,"LIFE:",style);
-    this.lifeField = this.add.text(lifeLabel.x+150, 20,this.playerLife.toString(),style);
+    var lifeLabel = this.add.text(830, 20,"VIDA:",style);
+    this.lifeField = this.add.text(lifeLabel.x+170, 20,this.playerLife.toString(),style);
 
     var str;
 
@@ -125,7 +125,7 @@ gameState.prototype = {
 
     if(Global.vehiclesArr.length === 0)
     {
-      Global.vehiclesArr = ["car1","car2","car3","car4","car5","car6","car7","car8","car9"];
+      Global.vehiclesArr = ["car1","car2","moto"];
       var index = Global.vehiclesArr.indexOf(Global.playerCarType);
       Global.vehiclesArr.splice(index,1);
 
@@ -385,8 +385,8 @@ gameState.prototype = {
    coinHit:function(player,coin)
    {
      coin.destroy();
-     this.setScore(10);
-
+     this.setScore(100);
+    
      if(coin.type === "heart")
      {
        if(this.playerLife < 5){

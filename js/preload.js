@@ -56,14 +56,7 @@ preloadState.prototype = {
 
      this.load.image('car1','cars/car1.png?v='+t);
      this.load.image('car2','cars/car2.png?v='+t);
-     this.load.image('car3','cars/car3.png?v='+t);
-     this.load.image('car4','cars/car4.png?v='+t);
-     this.load.image('car5','cars/car5.png?v='+t);
-     this.load.image('car6','cars/car6.png?v='+t);
-     this.load.image('car7','cars/car7.png?v='+t);
-     this.load.image('car8','cars/car8.png?v='+t);
-     this.load.image('car9','cars/car9.png?v='+t);
-
+     this.load.image('moto','cars/moto.png?v='+t);
      this.load.image('car_shadow','cars/car_shadow.png?v='+t);
 
      this.load.spritesheet('selectCars', 'spriteSheets/selectCars.png',106,175,9);
