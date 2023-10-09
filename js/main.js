@@ -1,6 +1,6 @@
 "use strict";
 
-var gameWidth = 1080;
+var gameWidth = 1380;
 var gameHeight = 1920;
 var gameDiv = "";
 

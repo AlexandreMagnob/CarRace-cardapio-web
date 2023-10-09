@@ -47,7 +47,7 @@ gameState.prototype = {
     var scoreLabel = this.add.text(5, 20,"PONTOS:",style);
     this.scoreField = this.add.text(scoreLabel.x+270, 20,this.score.toString(),style);
 
-    var lifeLabel = this.add.text(830, 20,"VIDA:",style);
+    var lifeLabel = this.add.text(1130, 20,"VIDA:",style);
     this.lifeField = this.add.text(lifeLabel.x+170, 20,this.playerLife.toString(),style);
 
     var str;
@@ -328,7 +328,7 @@ gameState.prototype = {
      if(this.LEFT === true) { this.playerVehicle.x += -15; this.playerVehicle.angle = -10;}
      if(this.RIGHT === true) { this.playerVehicle.x += 15; this.playerVehicle.angle = 10;}
 
-     var centerDistance = 280;
+     var centerDistance = 360;
 
      if(this.playerVehicle.x <= this.centerX - centerDistance) {
        this.playerVehicle.x = this.centerX - centerDistance;
