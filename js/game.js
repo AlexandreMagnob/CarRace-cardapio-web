@@ -325,8 +325,8 @@ gameState.prototype = {
 
      if(this.playerVehicle.hitted===false) { this.setScore(1); }
 
-     if(this.LEFT === true) { this.playerVehicle.x += -15; this.playerVehicle.angle = -10;}
-     if(this.RIGHT === true) { this.playerVehicle.x += 15; this.playerVehicle.angle = 10;}
+     if(this.LEFT === true) { this.playerVehicle.x += -17; this.playerVehicle.angle = -12;}
+     if(this.RIGHT === true) { this.playerVehicle.x += 17; this.playerVehicle.angle = 12;}
 
      var centerDistance = 360;
 
